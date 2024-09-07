@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Website">
+    <title>Anup Bhandari | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: "images.jpg";
+            font-family: 'Arial', sans-serif;
+            line-height: 1.9;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+        #home h1 {
+            font-size: 48px;
+        }
+
+        #home p {
+            font-size: 24px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 50px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-content, .skills-list, .projects-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-list ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label, form input, form textarea {
+            margin-bottom: 15px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Hide content initially */
+        .hidden {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <h1>Anup Bhandari</h1>
+            <p>Network Administrator & Full-Stack Developer</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I am a computer science teacher specializing in higher secondary level courses, with expertise in
+                network management systems, programming, and web development.
+            </p>
+
+            <!-- Hidden Content -->
+            <div id="more-content" class="hidden">
+                <p>
+                    I have hands-on experience in setting up and troubleshooting network devices such as routers and switches.
+                    Additionally, I develop full-stack web applications and teach various programming languages such as Python,
+                    Java, C, PHP, and web development using MySQL, HTML, CSS, and JavaScript.
+                </p>
+                <p>
+                    I'm passionate about creating effective solutions for both networking and software development issues, and
+                    providing high-quality education to my students.
+                </p>
+            </div>
+
+            <!-- Learn More Button -->
+            <a id="learn-more-btn" href="javascript:void(0);" class="btn" onclick="toggleContent()">Learn More</a>
+            <a href="https://drive.google.com/file/d/1WynYM_GeTfq06eGhq-0XRc2LdAKnGh0G/view?usp=drive_link" download class="btn">Download CV</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Network Monitoring Dashboard</h3>
+                <p>Developed a real-time network monitoring dashboard to ensure smooth network operations.</p>
+                <span>Technologies: Python, SQL, HTML, JavaScript</span>
+                <a href="#" class="btn">GitHub</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>E-Commerce Website</h3>
+                <p>A full-stack e-commerce site with user authentication and product management.</p>
+                <span>Technologies: PHP, MySQL, HTML, CSS, JavaScript</span>
+                <a href="#" class="btn">Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <ul>
+                <li>Programming: Python, C, Java, PHP</li>
+                <li>Web Development: HTML, CSS, JavaScript, MySQL</li>
+                <li>Network Management: Routers, Switches</li>
+                <li>Tools: Adobe Photoshop, Microsoft Office</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScHdK-utMPgeWDRQU78yoEpA5kgjCZlnCYXLN4kFRk5Jwu9GA/formResponse" method="POST" target="_self">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="entry.1820416566" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="entry.1358576662" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="entry.377009546" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anup Bhandari | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleContent() {
+            var content = document.getElementById('more-content');
+            var button = document.getElementById('learn-more-btn');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                content.classList.add('show');
+                button.textContent = 'Show Less';
+            } else {
+                content.classList.remove('show');
+                content.classList.add('hidden');
+                button.textContent = 'Learn More';
+            }
+        }
+    </script>
+
+</body>
+</html>
